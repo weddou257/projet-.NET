@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ENIS</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ENIS.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/fontawesome/css/all.css" />
+</head>
+<body>
+    <header>
+       
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark  border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+
+                <img src="~/image/logo_enis_sfax.png" width="30" />
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Students" asp-action="Index">Students</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Teacher" asp-action="Index">Teacher</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Courses" asp-action="Index">Courses</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <partial name="_LoginPartial" />
+        </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <div class="container">
+        <table>
+            <tr><td colspan="5" align="center"><b>L’ENIS EN CHIFFRES</b></td></tr>
+            <tr>
+                <td width="25%"><img src="~/image/detailetudiant.png" /></td>
+                <td width="20%"><img src="~/image/detaildoctorant.png" /></td>
+                <td width="20%"><img src="~/image/detaildepartement.png" /></td>
+                <td width="20%"><img src="~/image/detailuniversity.png" /></td>
+                <td width="20%"><img src="~/image/detailentreprise.png" /></td>
+
+            </tr>
+            <tr>
+                <td><b>1054</b></td>
+                <td><b>+700</b></td>
+                <td><b>7</b></td>
+                <td><b>+60</b></td>
+                <td><b>2500</b></td>
+            </tr>
+            <tr>
+                <td><b>Elèves Ingénieurs</b></td>
+                <td><b>Doctorants</b></td>
+                <td><b>Départements d’ingénierie</b></td>
+                <td><b>Universités partenaires</b></td>
+                <td><b>Entreprises partenaires</b></td>
+            </tr>
+        </table>
+
+    </div>
+
+    <footer class="border-top footer text-muted">
+
+
+
+        <div>
+            <span><b> ADRESSE : Route de la Soukra km 4 - 3038 sfax</b></span><br />
+            <span> <b> EMAIL : webmaster@enis.tn</b></span><br />
+            <span> <b> TÉL : +216 70 258 520</b></span>
+        </div><br /><br />
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.1709030655115!2d10.715555115155002!3d34.7260862893661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13002ca4425ed6a1%3A0x1cb1842d2707fe25!2s%C3%89cole%20Nationale%20d&#39;Ing%C3%A9nieurs%20de%20Sfax%20-%20ENIS!5e0!3m2!1sfr!2stn!4v1667688415108!5m2!1sfr!2stn"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="container">
+            &copy; 2022 - ENIS - <a asp-area="" asp-controller="Home" asp-action="Privacy">Contact Form</a>
+        </div>
+
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
